@@ -6,7 +6,7 @@ class CardProduct {
   render() {
     const card = document.createElement("div");
     card.classList.add("card-product");
-
+    card.addEventListener("click", () => handleClick(this.product));
     const image = document.createElement("img");
     image.src = this.product.imageUrl;
     image.alt = this.product.name;
@@ -17,12 +17,21 @@ class CardProduct {
     name.textContent = this.product.name;
     card.appendChild(name);
 
-    const price = document.createElement("p");
-    price.textContent = `$${this.product.price}`;
+    const description = document.createElement("p");
+    name.classList.add("card-description");
+    description.textContent = this.product.description;
+    card.appendChild(description);
+
+    const price = document.createElement("div");
+    price.classList.add("card-price");
+    price.textContent = `€${this.product.price}`;
     card.appendChild(price);
 
     return card;
   }
 }
 
+function handleClick(product) {
+  console.log("Product details:", product);
+}
 export default CardProduct;

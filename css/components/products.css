@@ -1,6 +1,7 @@
 .container-products {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 /* Style for the card container */
 .card-product {
@@ -13,6 +14,8 @@
   max-width: 350px;
   margin: 20px;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-product:hover {
@@ -25,13 +28,16 @@
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 8px 8px 0 0;
 }
 
 /* Style for the card title */
 .card-product .card-title {
+  max-width: 80%;
+  text-align: center;
   font-size: 20px;
   font-weight: bold;
-  margin: 0 0 10px;
+  margin: 0 auto 10px;
   font-family: var(--primary-font, "Roboto", sans-serif);
 }
 
@@ -54,7 +60,13 @@
   transition: background-color 0.3s;
   font-family: var(--secondary-font, "Open Sans", sans-serif);
 }
-
+.card-product .card-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  margin-top: auto;
+  text-align: end;
+}
 .card-product .card-button:hover {
   background-color: #0056b3;
 }

@@ -1,0 +1,11 @@
+/* main.css */
+
+/* Global styles and variables */
+:root {
+  --primary-font: "Roboto", sans-serif;
+  --secondary-font: "Open Sans", sans-serif;
+}
+body {
+  font-family: var(--primary-font);
+  color: #333;
+}
